@@ -1,1 +1,0 @@
-# dbt-du-curation-pipeline
