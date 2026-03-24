@@ -1,0 +1,11 @@
+dbt_du_project:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: oauth
+      project: du-data-490720
+      dataset: dbt
+      threads: 4
+      location: europe-west2
+      priority: interactive

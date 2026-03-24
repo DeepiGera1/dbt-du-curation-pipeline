@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_du_university_chapters
+    description: "Standardized staging view for university chapter data."
+    columns:
+      - name: object_id
+        description: "Standardized object id"
+      - name: chapter_id
+        description: "Business key for chapter"
+        tests:
+          - not_null
+      - name: chapter_name
+        description: "Standardized chapter name"
+        tests:
+          - not_null
+      - name: city
+        description: "Chapter city"
+      - name: state
+        description: "Chapter state"
+      - name: longitude
+        description: "Longitude cast to FLOAT64"
+      - name: latitude
+        description: "Latitude cast to FLOAT64"
+      - name: ingestion_time
+        description: "Load timestamp from ingestion"
+        tests:
+          - not_null

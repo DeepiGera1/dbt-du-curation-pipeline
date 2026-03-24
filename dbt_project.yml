@@ -1,0 +1,17 @@
+name: "dbt_du_project"
+version: "1.0.0"
+config-version: 2
+
+profile: "dbt_du_project"
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  dbt_du_project:
+    staging:
+      +materialized: view
+      +schema: du_stage
+    user:
+      +materialized: table
+      +schema: du_user

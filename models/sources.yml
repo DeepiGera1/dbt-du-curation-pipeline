@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: du_operational
+    database: du-data-490720
+    schema: du_operational
+    tables:
+      - name: du_university_chapters
+        description: "Raw landing table loaded by Python ingestion from the Ducks Unlimited API."
+        columns:
+          - name: OBJECT_ID
+            description: "Raw object id from source API"
+          - name: Chapter_ID
+            description: "Raw chapter id"
+          - name: Chapter_name
+            description: "Raw chapter name"
+          - name: City
+            description: "Raw city"
+          - name: State
+            description: "Raw state"
+          - name: longitude
+            description: "Raw longitude"
+          - name: latitude
+            description: "Raw latitude"
+          - name: ingestion_time
+            description: "Timestamp when ingestion loaded the row"

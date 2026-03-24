@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: university_chapters
+    description: "Final curated university chapters with contact/location-ready information."
+    columns:
+      - name: chapter_id
+        description: "Primary business key for chapter"
+        tests:
+          - not_null
+
+      - name: chapter_name
+        description: "Chapter name"
+        tests:
+          - not_null
+
+      - name: city
+        description: "City of chapter"
+
+      - name: state
+        description: "State of chapter"
+
+      - name: spatial_point
+        description: "BigQuery GEOGRAPHY point built from longitude and latitude"
+
+      - name: ingestion_time
+        description: "Raw ingestion timestamp"
+
+      - name: curated_at
+        description: "Timestamp when curated table was built"
